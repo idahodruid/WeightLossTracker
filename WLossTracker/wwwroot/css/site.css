@@ -17,13 +17,18 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  background-color: lightgray;
+ 
 }
-table {
-    color: white;
-}
-nav {
+
+Header {
     background-color: black;
+    color: white;
+   
+}
+title{
     color:white;
+}
+footer{
+    color:white;
+    background-color:black;
 }
