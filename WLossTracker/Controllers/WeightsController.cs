@@ -26,6 +26,8 @@ namespace WLossTracker.Controllers
                           View(await _context.Weight.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Weight'  is null.");
         }
+        // GET: ContactForm
+        
 
         // GET: Weights/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -50,13 +52,17 @@ namespace WLossTracker.Controllers
         {
             return View();
         }
+        public IActionResult ContactForm()
+        {
+            return View();
+        }
 
         // POST: Weights/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,WeightInput")] Weight weight)
+        public async Task<IActionResult> Create([Bind("Id,Name,WeightInput, Date")] Weight weight)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +94,7 @@ namespace WLossTracker.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,WeightInput")] Weight weight)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,WeightInput, Date")] Weight weight)
         {
             if (id != weight.Id)
             {
