@@ -1,18 +1,29 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    color: white;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        color: white;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    color: white;
 }
 
 body {
   margin-bottom: 60px;
+  background-color: lightgray;
+}
+table {
+    color: white;
+}
+nav {
+    background-color: black;
+    color:white;
 }
